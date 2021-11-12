@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "114187769089",
+    "project_id": "teammatchingapp",
+    "storage_bucket": "teammatchingapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:114187769089:android:f9cef10dfe17a5cbfa3700",
+        "android_client_info": {
+          "package_name": "com.example.teammatchingapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "114187769089-vopkfbqo7gbh1m2ai47va2uo027t55jp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCXmA7phKPBMraHdE3FKQ0ByAJkjVBsemc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "114187769089-vopkfbqo7gbh1m2ai47va2uo027t55jp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
