@@ -38,9 +38,7 @@
             <Button
                 android:id="@+id/loginBtn"
                 android:text="로그인"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:background="@drawable/background_radius"
+                style="@style/whitebutton"
                 android:layout_margin="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"/>
@@ -48,9 +46,7 @@
             <Button
                 android:id="@+id/joinBtn"
                 android:text="회원가입"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:background="@drawable/background_radius"
+                style="@style/whitebutton"
                 android:layout_margin="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"/>

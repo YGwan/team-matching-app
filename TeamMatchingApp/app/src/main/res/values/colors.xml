@@ -10,6 +10,9 @@
     <color name="Red">#FF0000</color>
 
                         <!--    추가한 부분      !-->
-    <color name="mainColor">#FFB74D</color>
+
     <color name="barColor">#999999</color>
+    <color name="mainColor">#FFB74D</color>
+    <color name="orange_base">#FFD08C</color>
+    <color name="orange_accent">#FF9D0D</color>
 </resources>

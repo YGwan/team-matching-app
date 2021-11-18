@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".board.BoardWriteActivity"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_marginTop="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="글쓰기 페이지"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/orange_accent"
+                        android:gravity="center"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#CECECE"/>
+
+                <EditText
+                    android:id="@+id/board_titleArea"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="제목을 입력해주세요"
+                    android:background="@android:color/transparent"
+                    android:textSize="20sp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0.8dp"
+                    android:background="@color/barColor"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"/>
+
+                <EditText
+                    android:id="@+id/board_contentArea"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="내용을 입력해주세요"
+                    android:background="@android:color/transparent"
+                    android:textSize="20sp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0.8dp"
+                    android:background="@color/barColor"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"/>
+
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/writeContentBtn"
+                        style="@style/yellowbutton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="40dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="20dp"
+                        android:background="@drawable/background_radius_yellow"
+                        android:layout_weight="1"
+                        android:text="입력" />
+
+                    <Button
+                        android:id="@+id/cancelBtn"
+                        style="@style/yellowbutton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="40dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/background_radius_yellow"
+                        android:layout_weight="1"
+                        android:text="취소" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+</layout>

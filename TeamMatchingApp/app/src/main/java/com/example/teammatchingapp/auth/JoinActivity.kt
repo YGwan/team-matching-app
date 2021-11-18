@@ -8,8 +8,11 @@ import androidx.databinding.DataBindingUtil
 import com.example.teammatchingapp.MainActivity
 import com.example.teammatchingapp.R
 import com.example.teammatchingapp.databinding.ActivityJoinBinding
+import com.example.teammatchingapp.manager.HomeFragment
+import com.example.teammatchingapp.manager.SettingFragment
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.auth.ktx.userProfileChangeRequest
 import com.google.firebase.ktx.Firebase
 
 class JoinActivity : AppCompatActivity() {
@@ -51,7 +54,7 @@ class JoinActivity : AppCompatActivity() {
                             // 비밀번호가 서로 같은지 확인
 
            if(!pwd1.equals(pwd2)){
-                Toast.makeText(this,"비밀번호를 같게 입력해주세요.",Toast.LENGTH_LONG).show()
+                Toast.makeText(this,"비밀번호가 일치하지 않습니다.",Toast.LENGTH_LONG).show()
                isGoToJoin = false
            }
 
@@ -69,7 +72,7 @@ class JoinActivity : AppCompatActivity() {
 
                              // 신규 사용자 가입 코드
 
-               auth.createUserWithEmailAndPassword(email,pwd1)
+                                 auth.createUserWithEmailAndPassword(email,pwd1)
                     .addOnCompleteListener(this) { task ->
                         if (task.isSuccessful) {
                             // Sign in success, update UI with the signed-in user's information
@@ -88,14 +91,7 @@ class JoinActivity : AppCompatActivity() {
                             Toast.makeText(this,"회원가입 실패",Toast.LENGTH_LONG).show()
                         }
                     }
-
-
             }
-
-
         }
-
     }
-
-
 }

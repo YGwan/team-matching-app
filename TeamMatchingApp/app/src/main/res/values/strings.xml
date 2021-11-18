@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">TeamMatchingApp</string>
+
+    <!-- 아래 레이아웃 모양 string -->
+
+    <string name="bottom_nav_first_label">홈</string>
+    <string name="bottom_nav_second_label">팀</string>
+    <string name="bottom_nav_third_label">설정</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>

@@ -74,10 +74,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text ="로그인하기"
-                android:textSize="20sp"
-                android:textStyle="bold"
+                style="@style/yellowbutton"
                 android:layout_margin="25dp"
-                android:background="@drawable/background_radius_yellow"
                 />
 
 

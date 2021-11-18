@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".board.TeamBoardInsideActivity"
+            android:orientation="vertical">
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/titleArea"
+                        android:text="title"
+                        android:textColor="@color/orange_accent"
+                        android:textSize="25sp"
+                        android:textStyle="bold"
+                        android:layout_width="match_parent"
+                        android:layout_marginRight="50dp"
+                        android:layout_marginLeft="50dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"/>
+
+                    <ImageView
+                        android:id="@+id/boardDelteIcon"
+                        android:layout_width="20dp"
+                        android:visibility="invisible"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_baseline_delete_24"
+                        android:layout_margin="10dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#CECECE"/>
+
+            <TextView
+                android:id="@+id/timeArea"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="시간"
+                android:textColor="@color/orange_base"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="30dp"
+                android:layout_gravity="right"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:layout_margin="20dp"
+                android:background="@drawable/text_borderline"
+                android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/contentArea"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="내용 입력 부분"
+                android:textColor="@color/orange_accent"
+                android:textSize="15dp"/>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="댓글"
+                android:gravity="center"
+                android:textColor="@color/orange_accent"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+                            <!--댓글 리스트뷰 구현부분-->
+
+            <ListView
+                android:id="@+id/commentLV"
+                android:layout_width="match_parent"
+                android:layout_height="600dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/orange_base" />
+
+        </LinearLayout>
+
+        </ScrollView>
+
+                        <!--댓글 입력 창 부분 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/commentTxtArea"
+                android:hint="댓글을 입력해주세요"
+                android:layout_width="330dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:background="@android:color/transparent"/>
+
+            <ImageView
+                android:id="@+id/commentBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/btnwrite"/>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</layout>

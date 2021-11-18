@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.teammatchingapp">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,6 +11,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TeamMatchingApp">
+        <activity
+            android:name=".board.TeamBoardInsideActivity"
+            android:exported="true" />
+        <activity
+            android:name=".board.BoardActivity"
+            android:exported="true" />
+        <activity
+            android:name=".board.BoardWriteActivity"
+            android:exported="true" />
         <activity
             android:name=".auth.JoinActivity"
             android:exported="true" />
