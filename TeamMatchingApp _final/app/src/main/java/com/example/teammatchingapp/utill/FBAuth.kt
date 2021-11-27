@@ -33,6 +33,14 @@ class FBAuth {
             return dataFormat
         }
 
+        //생성일
+
+        fun getDate(): String {
+            val currentDataTime = Calendar.getInstance().time
+            val dataFormat = SimpleDateFormat("yyyy.MM.dd", Locale.KOREA).format(currentDataTime)
+            return dataFormat
+        }
+
 
     }
 

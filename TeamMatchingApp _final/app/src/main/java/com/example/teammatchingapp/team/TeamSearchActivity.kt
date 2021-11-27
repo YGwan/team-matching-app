@@ -25,7 +25,7 @@ class TeamSearchActivity : AppCompatActivity() {
         val teamSIcon = findViewById<LinearLayout>(R.id.teamSearchIcon)
         teamSIcon.setOnClickListener{
             val searchKeyword = team_search_bar.text.toString()
-            // TODO: 입력 결과 데이터베이스에서 query
+
         }
 
     }

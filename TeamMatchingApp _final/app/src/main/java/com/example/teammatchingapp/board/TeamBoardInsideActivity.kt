@@ -58,7 +58,7 @@ class TeamBoardInsideActivity : AppCompatActivity() {
             showDialog()
         }
 
-        //댓글 쓰기 버튼을 누르면 key값을 함수에 전달함.
+        //댓글 쓰기 버튼을 누르면 key값을 함수에  전달함.
 
         binding.commentBtn.setOnClickListener {
             insertComment(key)
@@ -99,7 +99,6 @@ class TeamBoardInsideActivity : AppCompatActivity() {
                 Log.d(TAG, "loadPost:onCancelled", databaseError.toException())
             }
         }
-
         FBRef.commentRef.child(key).addValueEventListener(postListener)
 
     }

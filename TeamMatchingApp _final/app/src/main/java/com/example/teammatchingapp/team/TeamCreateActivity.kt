@@ -1,18 +1,12 @@
 package com.example.teammatchingapp.team
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.text.Layout
 import android.widget.ImageView
-import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import com.example.teammatchingapp.R
-import com.example.teammatchingapp.board.Board
-import com.example.teammatchingapp.databinding.ActivityBoardBinding
 import com.example.teammatchingapp.databinding.ActivityTeamCreateBinding
-import com.example.teammatchingapp.manager.TeamFragment
 import com.example.teammatchingapp.utill.FBAuth
 import com.example.teammatchingapp.utill.FBRef
 
@@ -27,16 +21,17 @@ class TeamCreateActivity : AppCompatActivity() {
         //setContentView(R.layout.activity_team_create)
 
         val appbar1 = findViewById<ImageView>(R.id.appbar1)
+        binding.teamCreateDate.setText(FBAuth.getDate())
 
         appbar1.setOnClickListener {
             finish()
         }
 
 
-
         binding.teamCreateBtn.setOnClickListener {
 
             var isGoToSend = true //빈 값 감지 변수
+
 
             val title = binding.teamCreateName.text.toString()
             val purpose = binding.teamCreatePurpose.text.toString()
@@ -58,37 +53,35 @@ class TeamCreateActivity : AppCompatActivity() {
             }
 
             if (num.isBlank()) {
-                Toast.makeText(this, "팀 활동 인원 부분을 작성하시오.", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "팀 팀장 이름 부분을 작성하시오.", Toast.LENGTH_SHORT).show()
                 isGoToSend = false
             }
 
-            if (date.isBlank()) {
-                Toast.makeText(this, "팀 활동 기간 부분을 작성하시오.", Toast.LENGTH_SHORT).show()
-                isGoToSend = false
-            }
 
 
             if (isGoToSend) {
-                //firebase data구조
-                //board
-                //  - key
-                //      -boardModel(title, content, uid, time)
+
+//               team
+//                -팀이름
+//                  -팀 주제
+//                     -팀 인원
+//                        - 팀 활동 기간
+//                            - uid
+
                 FBRef.teamRef
                     .push()
-                    .setValue(TeamModel(title, purpose, date, num, uid))
-
-                Toast.makeText(this, "게시글 입력을 완료", Toast.LENGTH_LONG).show()
+                    .setValue(teamModel(title,purpose,num,date,uid))
+                Toast.makeText(this, "팀 생성 완료", Toast.LENGTH_LONG).show()
                 finish()
             }
         }
 
 
-       binding.teamResetBtn.setOnClickListener{
+        binding.teamResetBtn.setOnClickListener{
 
-           binding.teamCreateName.setText("")
-           binding.teamCreatePurpose.setText("")
-           binding.teamCreateNum.setText("")
-           binding.teamCreateDate.setText("")
+            binding.teamCreateName.setText("")
+            binding.teamCreatePurpose.setText("")
+            binding.teamCreateNum.setText("")
 
         }
     }

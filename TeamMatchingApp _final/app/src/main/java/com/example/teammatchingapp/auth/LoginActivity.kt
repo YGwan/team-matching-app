@@ -31,7 +31,6 @@ class LoginActivity : AppCompatActivity() {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_login)
 
         binding.loginBtn.setOnClickListener {
-
             val email = binding.emailArea.text.toString()
             val pwd = binding.pwdArea.text.toString()
 
@@ -57,6 +56,7 @@ class LoginActivity : AppCompatActivity() {
 
                     }
                 }
+
 
 
         }

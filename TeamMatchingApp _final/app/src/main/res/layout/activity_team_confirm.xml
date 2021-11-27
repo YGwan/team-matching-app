@@ -25,6 +25,9 @@
             android:id="@+id/appbar1_text"
             android:layout_width="250dp"
             android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="-3dp"
+            android:layout_marginBottom="0dp"
             android:layout_toRightOf="@+id/appbar1"
             android:gravity="left|center"
             android:paddingLeft="10dp"
@@ -55,6 +58,10 @@
         android:layout_alignBottom="@+id/top_nav"
         app:dividerColor="#CDCDCD" />
 
+    <ListView
+        android:id="@+id/teamListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
 
 </LinearLayout>

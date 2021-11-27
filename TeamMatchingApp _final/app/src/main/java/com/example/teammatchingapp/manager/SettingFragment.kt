@@ -94,8 +94,6 @@ class SettingFragment : Fragment() {
             startActivity(intent)
         }
 
-        //강제 종료
-
         binding.closeBtn.setOnClickListener{
             System.exit(0)
 

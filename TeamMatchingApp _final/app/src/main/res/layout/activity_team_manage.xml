@@ -117,13 +117,10 @@
             android:layout_height="match_parent"
             android:layout_below="@id/center_divider">
 
-            <ListView
-                android:id="@+id/teamCreatListView"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:textColor="#838383">
-
-            </ListView>
+           <ListView
+               android:id="@+id/teamListView"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"/>
 
         </ScrollView>
 
@@ -135,81 +132,4 @@
         android:layout_alignBottom="@+id/top_nav"
         app:dividerColor="#CDCDCD" />
 
-    <LinearLayout
-        android:id="@+id/bottom_nav"
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:orientation="horizontal"
-        android:paddingTop="8dp">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            android:weightSum="3">
-
-            <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_gravity="center"
-                android:src="@drawable/ic_baseline_home_24" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:paddingTop="1.6dp"
-                android:text="@string/bottom_nav_first_label"
-                android:textAlignment="center"
-                android:textColor="#6E6E6E"
-                android:textSize="12sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@drawable/border_left_right_side"
-            android:orientation="vertical"
-            android:weightSum="3">
-
-            <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_gravity="center"
-                android:src="@drawable/ic_baseline_people_24" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:paddingTop="1.6dp"
-                android:text="@string/bottom_nav_second_label"
-                android:textAlignment="center"
-                android:textColor="@color/orange_accent"
-                android:textSize="12sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            android:weightSum="3">
-
-            <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_gravity="center"
-                android:src="@drawable/ic_baseline_settings_24" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:paddingTop="1.6dp"
-                android:text="@string/bottom_nav_third_label"
-                android:textAlignment="center"
-                android:textColor="#6E6E6E"
-                android:textSize="12sp" />
-        </LinearLayout>
-    </LinearLayout>
 </LinearLayout>

@@ -2,12 +2,13 @@
 
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/itemLinearLayout"
+    android:id="@+id/teamLinearLayout"
     android:layout_width="match_parent"
     android:layout_height="150dp"
     android:orientation="vertical">
 
     <LinearLayout
+        android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
@@ -27,7 +28,6 @@
                 android:text="team_name"
                 android:textSize="20sp"
                 android:textColor="@color/black"
-                android:textStyle="bold"
                 android:layout_marginLeft="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
@@ -40,11 +40,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="10dp">
+        android:layout_marginTop="15dp"
+        android:gravity="center">
         <TextView
 
             android:text="팀 주제:"
-            android:textSize="20sp"
+            android:textSize="15sp"
             android:textColor="@color/black"
             android:textStyle="bold"
             android:layout_width="wrap_content"
@@ -54,9 +55,8 @@
             android:id="@+id/teamPurposeArea"
             android:text="team_purpose"
             android:layout_marginLeft="10dp"
-            android:textSize="20sp"
+            android:textSize="15sp"
             android:textColor="@color/black"
-            android:textStyle="bold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
@@ -66,27 +66,46 @@
 
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginLeft="30dp"
-    android:layout_marginTop="10dp">
+    android:layout_marginTop="20dp">
 
-    <TextView
+        <TextView
 
-        android:text="활동 기간:"
-        android:textSize="20sp"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+            android:text="팀 리더:"
+            android:layout_marginLeft="60dp"
+            android:textSize="12sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
 
-    <TextView
-        android:id="@+id/teamActivityDate"
-        android:text="teamActivityDate"
-        android:layout_marginLeft="10dp"
-        android:textSize="20sp"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/teamLNArea"
+            android:text="name"
+            android:layout_marginLeft="10dp"
+            android:textSize="12sp"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+
+            android:text="팀 생성일:"
+            android:textSize="12sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginLeft="80dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/teamCreateDateArea"
+            android:text="date"
+            android:layout_marginLeft="10dp"
+            android:textSize="12sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
 
 </LinearLayout>
 

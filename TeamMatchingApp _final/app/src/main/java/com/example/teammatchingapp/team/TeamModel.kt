@@ -1,12 +1,11 @@
 package com.example.teammatchingapp.team
 
-data class TeamModel (
+data class teamModel(
 
-    val teamName: String = "",
-    val teamPurpose : String = "",
-    val teamNum : String = "",
-    val teamDate: String = "",
-    val uid: String = ""
-
+    val name : String = "",
+    val purpose : String = "",
+    val teamleader: String = "",
+    val date : String = "",
+    val uid : String = "",
 
 )

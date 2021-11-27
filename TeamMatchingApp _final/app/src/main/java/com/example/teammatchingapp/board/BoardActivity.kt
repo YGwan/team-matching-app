@@ -112,7 +112,6 @@ class BoardActivity : AppCompatActivity() {
                 Log.d(TAG, "loadPost:onCancelled", databaseError.toException())
             }
         }
-
         FBRef.boardref.addValueEventListener(postListener)
     }
 
