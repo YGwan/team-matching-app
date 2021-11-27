@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/top_nav"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:background="#FFB74D">
+
+        <ImageView
+            android:id="@+id/appbar1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:paddingStart="20dp"
+            android:src="@drawable/ic_baseline_arrow_back_ios_24" />
+
+        <TextView
+            android:id="@+id/appbar1_text"
+            android:layout_width="250dp"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/appbar1"
+            android:gravity="left|center"
+            android:paddingLeft="10dp"
+            android:text="@string/team_manage"
+            android:textColor="#6E6E6E"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="16dp"
+            android:layout_toRightOf="@id/appbar1_text"
+            android:gravity="right|center">
+
+            <TextView
+                android:id="@+id/navBoard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_all_directions_with_radius"
+                android:backgroundTint="@color/orange_base"
+                android:padding="10dp"
+                android:text="게시판"
+                android:textColor="#6E6E6E"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/top_nav"
+        app:dividerColor="#CDCDCD" />
+
+    <LinearLayout
+        android:id="@+id/lobby_nav"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="7"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/team_figure_title"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:paddingLeft="15dp"
+            android:paddingTop="12dp">
+
+            <!-- 현재 참여중인 팀의 숫자를 표시하는 뷰로, 텍스트 부분에는 팀 숫자가 표시된다. -->
+            <TextView
+                android:id="@+id/team_figure"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingTop="2dp"
+                android:text="@string/num_participated_team_now"
+                android:textColor="#838383"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@id/team_figure"
+                android:paddingTop="2dp"
+                android:text="9"
+                android:textColor="@color/orange_accent"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/team_figure"
+                android:layout_alignBottom="@+id/team_figure"
+                app:dividerColor="#CDCDCD" />
+
+        </RelativeLayout>
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/center_divider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/team_figure_title"
+            app:dividerColor="#CDCDCD" />
+
+        <!-- 활동중인 팀 목록 보여주기 -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/center_divider">
+
+            <ListView
+                android:id="@+id/teamCreatListView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="#838383">
+
+            </ListView>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/top_nav"
+        app:dividerColor="#CDCDCD" />
+
+    <LinearLayout
+        android:id="@+id/bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        android:paddingTop="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:weightSum="3">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_baseline_home_24" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="1.6dp"
+                android:text="@string/bottom_nav_first_label"
+                android:textAlignment="center"
+                android:textColor="#6E6E6E"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/border_left_right_side"
+            android:orientation="vertical"
+            android:weightSum="3">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_baseline_people_24" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="1.6dp"
+                android:text="@string/bottom_nav_second_label"
+                android:textAlignment="center"
+                android:textColor="@color/orange_accent"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:weightSum="3">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_baseline_settings_24" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="1.6dp"
+                android:text="@string/bottom_nav_third_label"
+                android:textAlignment="center"
+                android:textColor="#6E6E6E"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

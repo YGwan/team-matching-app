@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+        <!-- TODO: Update blank fragment layout -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical">
+                                <!--공모전 정보 사이트 공유 부분-->
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:gravity="end"
+                            android:layout_marginRight="20dp"
+                            android:text="현재 날짜 및 시간"
+                            android:textSize="10sp"
+                            android:fontFamily="@font/maintitle"/>
+
+                    <TextView
+                        android:id="@+id/mainTimeTxt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="end"
+                        android:layout_marginRight="20dp"
+                        android:text="현재 시간"
+                        android:textSize="10sp"
+                        android:fontFamily="@font/maintitle"/>
+
+                        <TextView
+                            android:id="@+id/information_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="20dp"
+                            android:text="공모전 정보 사이트"
+                            android:fontFamily="@font/maintitle"
+                            android:textColor="@color/orange_accent"
+                            android:textSize="25sp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <LinearLayout
+                            android:id="@+id/informationLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:layout_marginTop="0dp"
+                            android:orientation="horizontal"
+                            app:layout_constraintTop_toBottomOf="@+id/information_text">
+
+                            <ImageView
+                                android:id="@+id/sinGoodArea"
+                                style="@style/home_url_layout"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/content_singood" />
+                            />
+
+
+                            <ImageView
+                                android:id="@+id/singYouArea"
+                                style="@style/home_url_layout"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/content_singyou" />
+
+
+                            <ImageView
+                                android:id="@+id/youngArea"
+                                style="@style/home_url_layout"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/content_young" />
+
+                            <ImageView
+                                android:id="@+id/pickArea"
+                                style="@style/home_url_layout"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/content_campuspick" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout3"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:orientation="horizontal"
+                            app:layout_constraintTop_toBottomOf="@+id/informationLayout">
+
+                            <TextView
+                                style="@style/home_url_layout"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="씽 굿" />
+
+                            <TextView
+                                style="@style/home_url_layout"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="씽 유" />
+
+                            <TextView
+                                style="@style/home_url_layout"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="요즘것들" />
+
+                            <TextView
+                                style="@style/home_url_layout"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="캠퍼스픽" />
+
+
+                        </LinearLayout>
+
+
+                        <!--추천 공모전 소개 부분-->
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="300dp"
+                            android:orientation="vertical"
+                            app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+
+                            <com.google.android.material.divider.MaterialDivider
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:dividerColor="#CDCDCD" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginTop="30dp"
+                                android:gravity="center"
+                                android:fontFamily="@font/maintitle"
+                                android:text="⭐︎ 추천 공모전 ⭐︎"
+                                android:textColor="@color/Red"
+                                android:textSize="25sp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginRight="20sp"
+                                android:gravity="end"
+                                android:text="※ 해당 이미지를 클릭하시면 더 많은 정보를 볼 수 있습니다."
+                                android:textSize="8sp" />
+
+                            <ImageView
+                                android:id="@+id/recomImage"
+                                android:layout_width="250dp"
+                                android:layout_height="250dp"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginRight="20dp"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/content_recom"/>
+
+
+                        </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="30dp"
+                        android:gravity="center"
+                        android:fontFamily="@font/maintitle"
+                        android:text="⭐︎ 채용 정보 ⭐︎"
+                        android:textColor="@color/Red"
+                        android:textSize="25sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="20sp"
+                        android:gravity="end"
+                        android:text="※ 해당 이미지를 클릭하시면 더 많은 정보를 볼 수 있습니다."
+                        android:textSize="8sp" />
+
+                    <ImageView
+                        android:id="@+id/jobImage"
+                        android:layout_width="250dp"
+                        android:layout_height="250dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="20dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/job_rec"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="공지사항"
+                        android:fontFamily="@font/maintitle"
+                        android:textColor="@color/orange_accent"
+                        android:textSize="20sp"
+                        android:gravity="center"
+                        android:layout_marginTop="50dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/background_radius_base"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:id="@+id/board1Txt"
+                            android:text="board1"
+                            android:layout_width="wrap_content"
+                            android:layout_margin="10dp"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:id="@+id/board2Txt"
+                            android:text="board2"
+                            android:layout_margin="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:id="@+id/board3Txt"
+                            android:text="board3"
+                            android:layout_margin="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="금지행위"
+                        android:fontFamily="@font/maintitle"
+                        android:textColor="@color/orange_accent"
+                        android:textSize="20sp"
+                        android:gravity="center"
+                        android:layout_marginTop="20dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/background_radius_base"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:text="다른 사용자에게 불편함을 주거 불쾌감을 주는 행위"
+                            android:layout_width="wrap_content"
+                            android:layout_margin="10dp"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:text="타인의 권리를 침해하는 행위"
+                            android:layout_margin="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:text="정치/사회적 관련 행위나 발언"
+                            android:layout_margin="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:text="홍보 및 판매 행위"
+                            android:layout_margin="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:text="익명을 이용한 여론 조작 행위 등"
+                            android:layout_margin="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginRight="20sp"
+                        android:gravity="end"
+                        android:text="위 행위 적발시 이용 제한이나 법적으로 책임을 져야 할 수도 있습니다."
+                        android:textSize="8sp" />
+
+                                <!--scrollView 아래 공백 부분 채우기-->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="(주)YCJHJ"
+                        android:textSize="15sp"
+                        android:textStyle="bold|italic"
+                        android:textColor="@color/orange_accent"
+                        android:fontFamily="@font/maintitle"/>
+
+                    <LinearLayout 
+                        android:layout_width="match_parent"
+                        android:layout_height="110dp"/>
+
+                </LinearLayout>
+            </ScrollView>
+
+
+                            <!--선택된 하단 바 요소 색 변경 코드-->
+
+            <LinearLayout
+                android:id="@+id/linearLayout8"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                app:layout_constraintBottom_toTopOf="@+id/bottom_nav">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/orange_base" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+
+            </LinearLayout>
+
+                                 <!--하단 바 코드-->
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/materialDivider3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:dividerColor="#CDCDCD"
+                app:layout_constraintBottom_toTopOf="@+id/bottom_nav" />
+
+            <LinearLayout
+                android:id="@+id/bottom_nav"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:orientation="horizontal"
+                android:paddingTop="8dp"
+                android:background="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <LinearLayout
+                    android:id="@+id/homeTap"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:weightSum="3">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_baseline_home_24" />
+
+                    <TextView
+                        style="@style/bottom_navigation_item"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@string/bottom_nav_first_label" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/teamTap"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/border_left_right_side"
+                    android:orientation="vertical"
+                    android:weightSum="3">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_baseline_people_24" />
+
+                    <TextView
+                        style="@style/bottom_navigation_item"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@string/bottom_nav_second_label" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/settingTap"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:weightSum="3">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_baseline_settings_24" />
+
+                    <TextView
+                        style="@style/bottom_navigation_item"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@string/bottom_nav_third_label" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
