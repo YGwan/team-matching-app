@@ -1,4 +1,6 @@
-# TeamMatching_App
+# team - matching - app
+
+<br>
 
 ## kotlin + firebase로 팀매칭 앱 구현
 
